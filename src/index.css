@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Override Swiper pagination bullet styles */
+.swiper-pagination-bullet {
+  background-color: #6b7280 !important; /* Tailwind's gray-500 */
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #d946ef !important; /* Optional: pink-500 for active */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* .swiper,
+.swiper-wrapper,
+.swiper-slide {
+  overflow: visible !important;
+} */
+
+
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
