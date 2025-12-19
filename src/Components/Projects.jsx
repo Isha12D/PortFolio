@@ -18,6 +18,7 @@ const projects = [
     technologies: "Full Stack Project with socket-io integration",
     github: "https://github.com/Isha12D/Goal-Buddy",
     desc: ` GoalBuddy is a full-stack app using React, Tailwind CSS, Node.js, Express, and MongoDB. It lets users set and track personal and shared goals with friends in real-time via Socket.IO chat. Progress is visualized with Chart.js, and all data is stored efficiently in MongoDB.`,
+    live: 'soon',
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ const projects = [
     image: img1,
     technologies: "FullStack Project",
     github: "https://github.com/Isha12D/Shim-Services/tree/development",
-    desc: `Shim Services is a full-stack website (built using ReactJS, Node.js, Express, MySQL) for discovering and booking local home service providers. It features secure login, dynamic listings, easy booking, and support for payments, ratings, and reviews.`
+    desc: `Shim Services is a full-stack website (built using ReactJS, Node.js, Express, MySQL) for discovering and booking local home service providers. It features secure login, dynamic listings, easy booking, and support for payments, ratings, and reviews.`,
+    live: 'soon',
   },
   {
     id: 3,
@@ -34,22 +36,34 @@ const projects = [
     technologies: "FullStack Project",
     github: "https://github.com/Isha12D/Shim-Services/tree/development",
     desc: `Upcycle Bay is a platform (built using ReactJS, Tailwind CSS, Firebase) that promotes eco-friendly living through DIY projects and sustainable products, encouraging users to creatively reuse waste and reduce carbon emissions.`,
+    live: 'soon',
   },
   {
     id: 4,
+    name: "IshaTreats - A sweet management shop",
+    image: "https://i.pinimg.com/1200x/8c/2c/15/8c2c15b853871306b02aa218f9bf6f77.jpg",
+    technologies: "FullStack Project",
+    github: "https://github.com/Isha12D/IshaTreats",
+    desc: `Isha Treats is a full-stack sweets e-commerce web application featuring user authentication, role-based admin access, cart management, and responsive UI. Built using React (Vite) + Tailwind CSS for the frontend, Node.js, Express.js, and MongoDB for the backend, with secure JWT authentication and modern UX elements like skeleton loaders and protected actions.`,
+    live: 'https://clinquant-tiramisu-2ad88a.netlify.app/',
+  },
+  {
+    id: 5,
     name: "Spotify Clone",
     image: img2,
     technologies: "ReactJs, Tailwind CSS",
     github: "https://github.com/Isha12D/Music-Spotify-",
     desc: `Spotify Clone is a responsive music streaming website built using React and Tailwind CSS. It mimics core features of Spotify like browsing playlists, playing songs, and a sleek audio player interface. The app uses React Context for state management and provides a modern, interactive user experience.`,
+    live: 'soon',
   },
   {
-    id: 5,
+    id: 6,
     name: "Password Generator - Tkinter",
     image: img4,
     technologies: "Python, MySQL",
     github: "https://github.com/Isha12D/Password-Generator",
     desc: `Password Generator is a simple project built using Python and Tkinter. It allows users to generate secure and random passwords based on selected criteria like length and character types. The tool includes a clean GUI and supports saving passwords to a local database using MySQL.`,
+    live: 'soon',
   },
 ];
 
@@ -126,6 +140,19 @@ const Projects = () => {
                     >
                       View on GitHub
                     </a>
+
+                    {project.live!='soon' && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-400 underline hover:text-blue-500"
+                      >
+                        Live
+                      </a>
+                    )
+                    }
+
                   </div>
 
                 </div>
